@@ -4,7 +4,7 @@ const notesschema = mongoose.Schema({
     img:Array,
     title: String,
     Brand:String,
-    price:Number,
+    price:String,
     category:String,
     colour:String,
    dsc:String
