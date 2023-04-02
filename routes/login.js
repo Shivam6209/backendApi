@@ -38,7 +38,7 @@ login_rout.post("/", async (req, res) => {
         console.log(password);
 
         if (result) {
-          res.status(200).json({ "msg": "Login successfull!", "token": jwt.sign({ "userID": user._id }, "masai") })
+          res.status(200).json({ "msg": "Login successfull!", "token": jwt.sign({ "userID": user._id }, "masai"),name:user.name })
         } else {
           res.status(400).json({ "msg": "Wrong Credentials" })
         }
