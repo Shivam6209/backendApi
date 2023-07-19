@@ -9,6 +9,7 @@ const jwt = require("jsonwebtoken")
 
 reg_routes.post("/", async (req, res) => {
   const { name, email, password } = req.body
+  console.log(req.body)
   try {
     const userr=await reg_model.findOne({email})
     if(userr){
