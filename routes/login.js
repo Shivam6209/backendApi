@@ -28,6 +28,7 @@ reg_routes.post("/", async (req, res) => {
 })
   ;
 login_rout.post("/", async (req, res) => {
+  console.log(req.body)
   const { email, password } = req.body
   try {
     const user = await reg_model.findOne({ email })
